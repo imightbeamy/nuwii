@@ -41,7 +41,7 @@ import dualCamera.DualMoteCamera;
  * XYZPointWindow is a JPanle that displays the points sent by the Wii Remotes.
  * Each point is a circle that changes size based on the Z value of the point 
  * and the X and Y values are show as the position on the window. When a point 
- * can no longer be seen my the cameras the point is shown at the last seen 
+ * can no longer be seen by the cameras the point is shown at the last seen 
  * position and size and is displayed in red.
  * @author Amy Ciavolino
  */
