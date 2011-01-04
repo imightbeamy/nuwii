@@ -1,0 +1,53 @@
+\begin{thebibliography}{}
+
+\bibitem[Bak, 2004]{Bak04}
+Bak, A. (2004).
+\newblock 3d input devices for the grapecluster project.
+\newblock Independent study report, Rochester Institute of Technology.
+
+\bibitem[Bischof, 2010]{Bischof1:2010:Misc}
+Bischof, H.-P. (2010).
+\newblock The {S}piegel {P}roject.
+\newblock \url{http://spiegel.cs.rit.edu/~hpb/grapecluster/Spiegel/index.html}.
+
+\bibitem[Bischof et~al., 2006]{Bischof06}
+Bischof, H.-P., Dale, E., and Peterson, T. (2006).
+\newblock Spiegel - a visualization framework for large and small scale
+  systems.
+\newblock In Arabnia, H.~R., editor, {\em Proceedings of the 2006 International
+  Conference on Modeling, Simulation and Visualization Methods}, pages
+  199--205. CSREA Press.
+
+\bibitem[Dehling, 2008]{Dehling08}
+Dehling, E. (2008).
+\newblock Using multiple wiimote cameras to control a game.
+\newblock Master's thesis, University of Twente.
+
+\bibitem[Lee, 2008]{Lee08}
+Lee, J.~C. (2008).
+\newblock Hacking the nintendo wii remote.
+\newblock {\em IEEE Pervasive Computing}, 7:39--45.
+
+\bibitem[Underkoffler, 2010]{Underkoffler10}
+Underkoffler, J. (2010).
+\newblock John underkoffler points to the future of ui.
+\newblock Talk at TED 2010.
+
+\bibitem[Wang and Huang, 2008]{Wang08}
+Wang, D. and Huang, D. (2008).
+\newblock Low-cost motion capturing using nintendo wii remote controllers.
+\newblock Csc2228 project report, University of Toronto, Toronto, Ontario M5S
+  3G4.
+
+\bibitem[Wang and Popovi\'{c}, 2009]{Wang09}
+Wang, R.~Y. and Popovi\'{c}, J. (2009).
+\newblock Real-time hand-tracking with a color glove.
+\newblock In {\em SIGGRAPH '09: ACM SIGGRAPH 2009 papers}, pages 1--8, New
+  York, NY, USA. ACM.
+
+\bibitem[Wii~Brew, 2010]{WiiBrew10}
+Wii~Brew, C. (2010).
+\newblock Wiimote.
+\newblock \url{http://wiibrew.org/wiki/Wiimote}.
+
+\end{thebibliography}
