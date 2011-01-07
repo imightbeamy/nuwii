@@ -18,10 +18,22 @@ Bischof, H.-P., Dale, E., and Peterson, T. (2006).
   Conference on Modeling, Simulation and Visualization Methods}, pages
   199--205. CSREA Press.
 
+\bibitem[Cuypers et~al., 2009]{Cuypers09}
+Cuypers, T., Van~den Eede, T., Ligot, S., and Francken, Y. (2009).
+\newblock Stereowiision: Stereo vision with wiimotes.
+\newblock In {\em Proceedings of 3D Stereo MEDIA 2009}.
+
 \bibitem[Dehling, 2008]{Dehling08}
 Dehling, E. (2008).
 \newblock Using multiple wiimote cameras to control a game.
 \newblock Master's thesis, University of Twente.
+
+\bibitem[Hay et~al., 2008]{Hay08}
+Hay, S., Newman, J., and Harle, R. (2008).
+\newblock Optical tracking using commodity hardware.
+\newblock In {\em Proceedings of the 7th IEEE/ACM International Symposium on
+  Mixed and Augmented Reality}, ISMAR '08, pages 159--160, Washington, DC, USA.
+  IEEE Computer Society.
 
 \bibitem[Lee, 2008]{Lee08}
 Lee, J.~C. (2008).
