@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2010.1.11)  7 JAN 2011 14:31
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2010.1.11)  7 JAN 2011 14:36
 entering extended mode
  %&-line parsing enabled.
 **ourpaper.tex
@@ -380,6 +380,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--130
 File: Diagram3_CoordinateShift.png Graphic file (type png)
 
 <use Diagram3_CoordinateShift.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <Diagram1_CalcTopView.png, id=24, 271.9761pt x 282.8166pt>
 File: Diagram1_CalcTopView.png Graphic file (type png)
 
@@ -388,24 +391,17 @@ File: Diagram1_CalcTopView.png Graphic file (type png)
 File: Diagram2_CalcSideView.png Graphic file (type png)
 
 <use Diagram2_CalcSideView.png> [3 <./fingerslips.png> <./Diagram3_CoordinateSh
-ift.png (PNG copy)>] <Diagram4_FinalPoint.png, id=34, 368.3361pt x 283.2984pt>
+ift.png (PNG copy)> <./Diagram1_CalcTopView.png (PNG copy)>]
+<Diagram4_FinalPoint.png, id=34, 368.3361pt x 283.2984pt>
 File: Diagram4_FinalPoint.png Graphic file (type png)
 
 <use Diagram4_FinalPoint.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 1014) has occurred while \output is active []
-
-
 <Diagram5_IntersectingRays.png, id=35, 243.7908pt x 312.2064pt>
 File: Diagram5_IntersectingRays.png Graphic file (type png)
 
-<use Diagram5_IntersectingRays.png> [4 <./Diagram1_CalcTopView.png (PNG copy)> 
-<./Diagram2_CalcSideView.png (PNG copy)> <./Diagram4_FinalPoint.png (PNG copy)>
- <./Diagram5_IntersectingRays.png (PNG copy)>]
-<Pinch.png, id=39, 385.44pt x 230.3004pt>
+<use Diagram5_IntersectingRays.png> [4 <./Diagram2_CalcSideView.png (PNG copy)>
+ <./Diagram4_FinalPoint.png (PNG copy)> <./Diagram5_IntersectingRays.png (PNG c
+opy)>] <Pinch.png, id=39, 385.44pt x 230.3004pt>
 File: Pinch.png Graphic file (type png)
  <use Pinch.png>
 <Swipe.png, id=40, 311.7246pt x 234.1548pt>
@@ -417,11 +413,10 @@ File: Rotation.png Graphic file (type png)
 <Camera.png, id=45, 314.1336pt x 268.1217pt>
 File: Camera.png Graphic file (type png)
  <use Camera.png>
+Underfull \vbox (badness 4013) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6 <./Pinch.png (PNG copy)> <./Swipe.png (PNG copy)> <./Rotation.png (PNG copy)
-> <./Camera.png (PNG copy)>] (./ourpaper.bbl
+ [6 <./Pinch.png (PNG copy)> <./Swipe.png (PNG copy)> <./Rotation.png (PNG copy
+)> <./Camera.png (PNG copy)>] (./ourpaper.bbl
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
@@ -460,7 +455,7 @@ urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on ourpaper.pdf (7 pages, 1673100 bytes).
+Output written on ourpaper.pdf (7 pages, 1673165 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
