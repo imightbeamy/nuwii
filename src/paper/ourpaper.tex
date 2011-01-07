@@ -125,7 +125,7 @@ The algorithm assumes that the Wii Remotes are in the same y and z plane and
 are placed at known angles in the x plane. Deviating from the specified
 orientation will produce errors/an error in the final result. It is possible to
 get usable output from the algorithm without knowing the distance between the
-Wii Remotes. However, if the distance is known then the .nal output will have
+Wii Remotes. However, if the distance is known then the final output will have
 the same unit as the distance.  \\
 
 \noindent Steps 1-3 are repeated for the input from both the left and right
@@ -333,12 +333,12 @@ will zoom out.
 for future expansion of NuWii. Right now, our program recognizes two basic
 gestures and three composite gestures, which are identi.ed using two points of
 IR input. Future contributors could design and implement more gestures, which
-would expand control over the Spiegel program signi.cantly. The expansion of
+would expand control over the Spiegel program significantly. The expansion of
 the gesture library could be aided by tracking more than two points at a time.
 This would require more advanced trigonometry, additional Wii Remotes, and/or
 different wavelengths of IR light, because eachWii Remote can only store data
 for 4 points at a time. Currently the Wii Remote cameras must be placed in a
-close approximation to the orientation speci.ed by the user in software in
+close approximation to the orientation specified by the user in software in
 order for the gesture recognition code to work. A camera calibration method
 could be written, allowing the Wii Remotes to be placed at any angle and any
 distance apart.  Research is also needed in order to quantify the differences
@@ -357,8 +357,8 @@ interfaces.\\ Further research into the way that the Wii Remote connects to the
 computer via Bluetooth would also be helpful, since we noted that other
 Bluetooth devices occasionally caused interference. Additionally, the error in
 sensing the points could be reduced by the addition of another Wii Remote
-placed above the .rst two. Additionally, the error in sensing the points could
-be reduced by the addition of a another Wii Remote placed above the .rst two.
+placed above the first two. Additionally, the error in sensing the points could
+be reduced by the addition of a another Wii Remote placed above the first two.
 This would help reduce the error in sensing correct points as well as
 eliminating error when the wrong points are matched.\\
  
