@@ -42,10 +42,11 @@ finger tracking  \cite{Lee08}. Most of the projects done with Wii Remotes use
 MATLAB for camera calibration and resolving points in 3D space. However, using
 MATLAB limits the audience, affordability, and flexibility of the software.
 Some previous papers tracked multiple points in 3D, but did so only in the
-context of head tracking. Head tracking limits the points range of motion
-making it easier to correctly distinguish the points. Other projects had
-minimal error checking involved [MY SECOND REFERENCE -JASON]. In contrast,
-NuWii is able to track two points under more general conditions.
+context of head tracking [Jason's 3rd reference here]. Head tracking limits the
+points range of motion making it easier to correctly distinguish the points.
+Other projects had minimal error checking involved [MY SECOND REFERENCE
+-JASON]. In contrast, NuWii is able to track two points under more general
+conditions.
  
 \section{\uppercase{Hardware}} \noindent The foundation of our hardware is the
 Nintendo Wii Remote. We elected to use the Wii Remote for its affordability,
@@ -280,22 +281,22 @@ import five boxes - one to import the data file from the file system, one that
 extracts the stars from the data, one that converts the star data into a format
 that Java3D can understand, one that determines camera parameters, and finally
 a display window for the image. Our team wrote two new functions for Spiegel.
-One of these, named WiimoteControl, connects the Wii Remotes and interprets the
-data read from the Wii Remotes as camera coordinates. The other,
-3DPointDisplay, shows the points from the Wii Remotes in 3D space and is used 
-for debugging the system when it appears not to work.
+One of these, named WiimoteControl, connects the Wii Remotes to the computer
+and interprets the data read from the Wii Remotes as camera coordinates. The
+other, 3DPointDisplay, shows the points from the Wii Remotes in 3D space and is
+used for debugging the system when it appears not to work.
 
  
-\subsection{Camera Control in Spiegel} In the Spiegel visualization
-framework, three composite gestures were implemented to control the camera
-position. These gestures are used to enter different camera movement modes.
-Each gesture starts with a pinch that is followed by a swipe. The pinch sets a
-center point to be used as a reference for movement in each camera movement
-mode. The direction of the swipe determines which mode is activated. The user
-can easily exit each movement mode by unpinching their fingers. Using these
-three gestures the user can view the simulation from any angle.
+\subsection{Camera Control in Spiegel} Within Spiegel, three composite gestures
+were implemented to control the camera position. These gestures are used to
+enter different camera movement modes.  Each gesture starts with a pinch that
+is followed by a swipe. The pinch sets a center point to be used as a reference
+for movement in each camera movement mode. The direction of the swipe
+determines which mode is activated. The user can easily exit each movement mode
+by unpinching their fingers. Using these three gestures the user can view the
+simulation from any angle.
 
-\subsection{Camera Orientation and Coordinates} The best way for the user to
+\subsubsection{Camera Orientation and Coordinates} The best way for the user to
 remain oriented when viewing a simulation in Spiegel is to have the camera
 constantly pointing towards the origin. The simplest way to achieve this
 behavior is to use a spherical coordinate system for the camera position.
@@ -309,46 +310,58 @@ changes the value of one of the spherical coordinates.
 \end{figure}
 
 
-\subsection{Camera Movement Modes} There are three camera movement modes:
+\subsubsection{Camera Movement Modes} There are three camera movement modes:
 horizontal rotation, vertical rotation, and zoom. Horizontal rotation is
 activated by pinching and swiping to the right. To rotate the model, the user
 rotates the pinched point around the reference point to move the camera around
 the model (Figure~\ref{rotation}). Swiping backwards (towards the user) after
-pinching triggers vertical rotation mode. After swiping, the user can move
-their hand up or down to rotate the camera vertically around the model.
+pinching triggers vertical rotation mode. After swiping, the user can move his
+hand up or down to rotate the camera vertically around the model.
 Horizontally, the camera can be rotated around the model indefinitely, but
-vertical rotation is capped at positive and negative 90 degrees. This cap keeps
-the user from moving the camera over the model which would make the view
-up-side-down. The zoom control is activated by pinching and then swiping down.
-Once in the zoom mode, the distance between the center point and the current
-point is used to scale the zoom speed. If the current point is at the center
-point set by the pinch, then the camera will be stationary. When the current
-point is in front of the center point, then the camera will zoom in. Similarly,
-if the current point is behind the center point, then the camera will zoom out.
+vertical rotation is capped at positive and negative 90 degrees. This
+restriction keeps the user from moving the camera over the model which would
+make the view up-side-down. The zoom control is activated by pinching and then
+swiping down.  Once in the zoom mode, the distance between the center point and
+the current point is used to scale the zoom speed. If the current point is at
+the center point set by the pinch, then the camera will be stationary. When the
+current point is in front of the center point, then the camera will zoom in.
+Similarly, if the current point is behind the center point, then the camera
+will zoom out.
 
  
-\section{\uppercase{Integrating with the Spiegel Visualization Framework}} 
 \section{\uppercase{Conclusions and Future Work}} There is a lot of potential
 for future expansion of NuWii. Right now, our program recognizes two basic
-gestures and three composite gestures, which are identified using two points of
+gestures and three composite gestures, which are identi.ed using two points of
 IR input. Future contributors could design and implement more gestures, which
-would expand control over the Spiegel program significantly. The expansion of
+would expand control over the Spiegel program signi.cantly. The expansion of
 the gesture library could be aided by tracking more than two points at a time.
 This would require more advanced trigonometry, additional Wii Remotes, and/or
-different wavelengths of IR light, because each Wii Remote can only store data
-for 4 points at a time.  Currently the Wii Remote cameras must be placed in a
-close approximation to the orientation specified by the user in software in
+different wavelengths of IR light, because eachWii Remote can only store data
+for 4 points at a time. Currently the Wii Remote cameras must be placed in a
+close approximation to the orientation speci.ed by the user in software in
 order for the gesture recognition code to work. A camera calibration method
 could be written, allowing the Wii Remotes to be placed at any angle and any
-distance apart. Research is also needed in order to quantify the differences
-and advantages to using a 3D gesture system over a traditional system. Further
-research into the way that the Wii Remote connects to the computer via
-Bluetooth would also be helpful, since we noted that other Bluetooth devices
-occasionally caused interference.  Additionally, the error in sensing the
-points could be reduced by the addition of a another Wii Remote placed above
-the first two. This would help reduce the error in sensing correct points as
-well as eliminating error when the wrong points are matched.
-
+distance apart.  Research is also needed in order to quantify the differences
+and advantages to using a 3D gesture system over a traditional system. \\
+During research and implementation, we tried various different gestures and
+hand motions. Due to lack of time, we were only able to conduct informal
+investigations as to which gestures felt more natural to the user. These
+investigations are what led to our final implementation of the NuWii system.
+The NuWii system is intended to be a starting point, where more gestures can be
+added to the library so that more end user applications can be supported. While
+our gestures work acceptably for the described applications, other applications
+will have their own needs for specific gestures and settings. More research
+should be done to discover classifications for applications and gestures to
+better help the process of design and implementation of natural user
+interfaces.\\ Further research into the way that the Wii Remote connects to the
+computer via Bluetooth would also be helpful, since we noted that other
+Bluetooth devices occasionally caused interference. Additionally, the error in
+sensing the points could be reduced by the addition of another Wii Remote
+placed above the .rst two. Additionally, the error in sensing the points could
+be reduced by the addition of a another Wii Remote placed above the .rst two.
+This would help reduce the error in sensing correct points as well as
+eliminating error when the wrong points are matched.\\
+ 
     In this paper we have introduced NuWii, a working gesture-based interface
 for the Spiegel visualization framework. We have explained our tracking
 algorithm, and described the gestures that we have implemented thus far. Our
@@ -356,9 +369,9 @@ system is capable of tracking gestures in 3D, our source code is available to
 the public under the GNU Public License, and the input device can be replicated
 using less than \$150 worth of hardware. 
     
-%\section*{\uppercase{Acknowledgements}} %    This material is based upon work
-supported by the National Science %Foundation under Award No. CCF-0851743.\\ %
-Astrophysical data was provided by RIT's Center for Computational %Relativity
+\section*{\uppercase{Acknowledgements}}     This material is based upon work
+supported by the National Science Foundation under Award No. CCF-0851743.\\ 
+Astrophysical data was provided by RIT's Center for Computational Relativity
 and Gravitation (CCRG).
 
 \renewcommand{\baselinestretch}{0.98} \bibliographystyle{apalike} {\small
