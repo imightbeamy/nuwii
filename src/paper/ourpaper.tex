@@ -42,20 +42,20 @@ finger tracking  \cite{Lee08}. Most of the projects done with Wii Remotes use
 MATLAB for camera calibration and resolving points in 3D space. However, using
 MATLAB limits the audience, affordability, and flexibility of the software.
 Some previous papers tracked multiple points in 3D, but did so only in the
-context of head tracking \cite{Cuypers09}. Head tracking limits the
-points range of motion making it easier to correctly distinguish the points.
-Other projects had minimal error checking involved \cite{Hay08}. In contrast, NuWii is able to track two points under more general
+context of head tracking \cite{Cuypers09}. Head tracking limits the range of
+motion of the points, making it easier to correctly distinguish them.
+Other projects involved only minimal error checking \cite{Hay08}. In contrast, NuWii is able to track two points under more general
 conditions.
  
 \section{\uppercase{Hardware}} \noindent The foundation of our hardware is the
 Nintendo Wii Remote. We elected to use the Wii Remote for its affordability,
 availability, and specialized camera hardware. In NuWii, the cameras on the
-front of the Wii Remotes pick up infrared light re.ected off the user.s .nger
-tips. Two arrays of infrared LEDs supply the infrared light and .nger slips,
-made from re.ective tape, re.ect it back to the cameras. We also machined a
-wooden board to hold theWii Remotes in place. The notches in our board hold the
+front of the Wii Remotes pick up infrared light reflected off the user's finger
+tips. Two arrays of infrared LEDs supply the infrared light and finger slips,
+made from reflective tape, reflect it back to the cameras. We also machined a
+wooden board to hold the Wii Remotes in place. The notches in our board hold the
 Wii Remotes two feet apart and angled 22.5 degrees inward, but any reasonable
-angle with overlapping .elds of view could be used. All the hardware used in
+angle with overlapping fields of view could be used. All the hardware used in
 NuWii is available to the average consumer living in a well developed country.
 A photograph of the NuWii setup is shown in Figure~\ref{setup}. 
 
@@ -83,15 +83,15 @@ written to facilitate easier communication with the Wii Remotes and their
 peripherals \cite{WiiBrew10}. We chose the \emph{motej} library because it is
 open source, allowing us a greater understanding of how it communicates with
 the Wii Remotes.  Additionally, both Spiegel and \emph{motej} are written in
-Java making integration straightforward.
+Java, making integration straightforward.
 
 \subsection{Infrared LED Arrays} Each Wii Remote is surrounded with infrared
 LEDs that supply light to be reflected back to the cameras. We made two arrays,
 one for each Wii Remote, of 48 LEDs each. The wave length of the LEDs is 940 nm
 which is the optimal wave length for the Wii Remotes' cameras \cite{WiiBrew10}.
 The LEDs are arranged in eight groups wired in parallel. Each group contains 6
-LEDs and a 75 Ohm resistor in series. The LED arrays are powered by a 12V, 1amp
-power supply.
+LEDs and a 75 Ohm resistor in series. The LED arrays are powered by a 12V, 1
+amp power supply.
  
 \subsection{Finger Slips} We created two finger slips out of reflective tape
 that easily slide on and off the user's index finger and thumb
@@ -114,7 +114,7 @@ Gain tape (thumb).} \label{fingerslips} \end{figure}
 \noindent In order to find a point's location in three dimensions, data from
 two or more Wii Remotes must be combined. NuWii uses two Wii Remotes to find
 points in 3D space. A third Wii Remote could be added to gain better accuracy,
-but it would require a more advanced set up and increase the price of our
+but it would require a more advanced setup and increase the price of our
 system. Our algorithm uses trigonometry to find the location in 3D space, given
 the angle of the Wii Remotes and their distance apart.  
 
@@ -165,7 +165,7 @@ the cameras.  \begin{equation}\label{eq1} X' = tan(\theta) \end{equation}
 \begin{equation}\label{eq3} Z' = 1          \end{equation}
 
 \item[Step 4:] After the normalized points are found, they are rotated by
-alpha, the angle between the Wii Remotes and the y-z plane shown in
+\alpha, the angle between the Wii Remotes and the y-z plane shown in
 figure~\ref{finalpoint}. Rotating the points is not required if the Wii Remotes
 are parallel. The following equations are used to rotate the points. 
 
@@ -203,13 +203,12 @@ calculation.
 
 \subsection{Multiple Points}Aside from hardware and environmental issues, this
 algorithm will always work when sensing one point. However, reading two points
-introduces problem areas. These problems occurred most often when both points
-lie in the same y plane. The problems occur because the Wii Remotes transmit
-only the coordinates of the infrared points that they see. This means that
-there are no surrounding visual aids to help distinguish between the two
-points. Because of this limited information, it can be impossible to tell which
-point from the second Wii Remote corresponds to the point seen by the first Wii
-Remote in certain situations.  
+introduces problem areas, particularly when both points lie in the same y plane.
+The problems occur because the Wii Remotes transmit only the coordinates of the
+infrared points that they see. This means that there are no surrounding visual
+aids to help distinguish between the two points. Because of this limited
+information, it can be impossible to tell which point from the second Wii Remote
+corresponds to the point seen by the first Wii Remote in certain situations.  
  
 \begin{figure}[ht] \begin{center}
 \includegraphics[height = 7.5cm]{Diagram5_IntersectingRays} \end{center}
@@ -227,7 +226,7 @@ remember that the Wii Remotes return the points that they detect in the same
 order throughout a session, and assume that they have not changed. This can be
 a problem if a camera stops sensing points and then flips the order it senses
 them in. While there still exist some problems with multiple points, they
-remain largely unnoticed because the points are constantly updating.
+remain largely unnoticed because the points are constantly being updated.
 
 \begin{figure*}[t!] \begin{center}
 \subfigure[Pinch]{\label{pinch}\includegraphics[width = 5cm]{Pinch.png}}
@@ -238,7 +237,7 @@ remain largely unnoticed because the points are constantly updating.
 \section{\uppercase{Gestures}} Our implementation of gesture recognition is
 designed to be easily expandable. This is accomplished by using two levels of
 gestures: basic gestures and composite gestures. Basic gestures are simple
-motions and movements of the users hands that are detected within our
+motions and movements of the user's hands that are detected within our
 stereo-vision algorithm. We created a gesture interface in Java that can be
 implemented by any class that needs to detect these basic gestures. The second
 level of gestures is composite gestures. Composite gestures are combinations of
