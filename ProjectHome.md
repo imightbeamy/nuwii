@@ -1,0 +1,1 @@
+NuWii is a natural user interface using Wii Remotes. NuWii uses motej, a java library, for interfacing with the Wii Remotes. NuWii uses two Wii Remotes as infrared cameras in stereo vision to track 3D points. Two points are tracked and used to recognize different gestures.
